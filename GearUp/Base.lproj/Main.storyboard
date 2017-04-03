@@ -139,8 +139,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Browse" id="RcQ-2z-s5I">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="JMO-KI-Ev2"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="wZa-jc-dL3"/>
+                        <barButtonItem key="leftBarButtonItem" image="User-100" id="JMO-KI-Ev2"/>
+                        <barButtonItem key="rightBarButtonItem" image="Image" id="wZa-jc-dL3"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFp-Yb-48A" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,4 +148,8 @@
             <point key="canvasLocation" x="-898.39999999999998" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="50" height="50"/>
+        <image name="User-100" width="50" height="50"/>
+    </resources>
 </document>
