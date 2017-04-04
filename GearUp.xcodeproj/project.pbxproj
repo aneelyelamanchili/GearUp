@@ -14,8 +14,16 @@
 		1124920D1E85DEDD0073C929 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1124920B1E85DEDD0073C929 /* LaunchScreen.storyboard */; };
 		112492181E85DEDD0073C929 /* GearUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112492171E85DEDD0073C929 /* GearUpTests.swift */; };
 		112492231E85DEDD0073C929 /* GearUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112492221E85DEDD0073C929 /* GearUpUITests.swift */; };
+		20409100D3F7141B47237109 /* Pods_GearUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F7892D45C002C9E07AB1CE /* Pods_GearUpUITests.framework */; };
+		4F145597FE5FC92E3A2BE192 /* Pods_GearUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CBBCAF11547FC7E3A101C7 /* Pods_GearUpTests.framework */; };
+		89DC17D085E9A34195FAFD74 /* Pods_GearUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE1707239A8E7290EE87B9B /* Pods_GearUp.framework */; };
 		A0026AF81E92410B00CFAB0A /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0026AF71E92410B00CFAB0A /* CategoryRow.swift */; };
 		A0026AFA1E92C14C00CFAB0A /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0026AF91E92C14C00CFAB0A /* ListingCell.swift */; };
+		A0026AFC1E92E71800CFAB0A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0026AFB1E92E71800CFAB0A /* MainViewController.swift */; };
+		A0026AFE1E92E73000CFAB0A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0026AFD1E92E73000CFAB0A /* MenuViewController.swift */; };
+		A0026B001E92EE0300CFAB0A /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0026AFF1E92EE0300CFAB0A /* Interactor.swift */; };
+		A0026B021E92EE4800CFAB0A /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0026B011E92EE4800CFAB0A /* MenuHelper.swift */; };
+		A0026B041E92F02C00CFAB0A /* PresentMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0026B031E92F02C00CFAB0A /* PresentMenuAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		106A1875C11CC94EB8A07919 /* Pods-GearUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GearUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GearUp/Pods-GearUp.release.xcconfig"; sourceTree = "<group>"; };
 		112491FF1E85DEDD0073C929 /* GearUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GearUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		112492021E85DEDD0073C929 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		112492041E85DEDD0073C929 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,8 +58,21 @@
 		1124921E1E85DEDD0073C929 /* GearUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GearUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		112492221E85DEDD0073C929 /* GearUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearUpUITests.swift; sourceTree = "<group>"; };
 		112492241E85DEDD0073C929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E23723781C40D0900FB8FF9 /* Pods-GearUpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GearUpUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GearUpUITests/Pods-GearUpUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5FE1707239A8E7290EE87B9B /* Pods_GearUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GearUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62F7892D45C002C9E07AB1CE /* Pods_GearUpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GearUpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68F9388D0437F749F1DB44C6 /* Pods-GearUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GearUpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GearUpTests/Pods-GearUpTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8AC9289D40E2E77163882610 /* Pods-GearUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GearUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GearUp/Pods-GearUp.debug.xcconfig"; sourceTree = "<group>"; };
+		92CBBCAF11547FC7E3A101C7 /* Pods_GearUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GearUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0026AF71E92410B00CFAB0A /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		A0026AF91E92C14C00CFAB0A /* ListingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCell.swift; sourceTree = "<group>"; };
+		A0026AFB1E92E71800CFAB0A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A0026AFD1E92E73000CFAB0A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		A0026AFF1E92EE0300CFAB0A /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		A0026B011E92EE4800CFAB0A /* MenuHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
+		A0026B031E92F02C00CFAB0A /* PresentMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentMenuAnimator.swift; sourceTree = "<group>"; };
+		CDEFFB34A08F372084B6DA06 /* Pods-GearUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GearUpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GearUpTests/Pods-GearUpTests.release.xcconfig"; sourceTree = "<group>"; };
+		DEB25334B68DAE29F6884DA7 /* Pods-GearUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GearUpUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GearUpUITests/Pods-GearUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DC17D085E9A34195FAFD74 /* Pods_GearUp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F145597FE5FC92E3A2BE192 /* Pods_GearUpTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20409100D3F7141B47237109 /* Pods_GearUpUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +110,8 @@
 				112492161E85DEDD0073C929 /* GearUpTests */,
 				112492211E85DEDD0073C929 /* GearUpUITests */,
 				112492001E85DEDD0073C929 /* Products */,
+				7DABBF2F0719BDB128FD3451 /* Pods */,
+				6651A7132D7A0435B6D76DCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +132,12 @@
 				112492041E85DEDD0073C929 /* ViewController.swift */,
 				A0026AF71E92410B00CFAB0A /* CategoryRow.swift */,
 				A0026AF91E92C14C00CFAB0A /* ListingCell.swift */,
+				A0026AFB1E92E71800CFAB0A /* MainViewController.swift */,
+				A0026AFD1E92E73000CFAB0A /* MenuViewController.swift */,
 				112492061E85DEDD0073C929 /* Main.storyboard */,
+				A0026AFF1E92EE0300CFAB0A /* Interactor.swift */,
+				A0026B011E92EE4800CFAB0A /* MenuHelper.swift */,
+				A0026B031E92F02C00CFAB0A /* PresentMenuAnimator.swift */,
 				112492091E85DEDD0073C929 /* Assets.xcassets */,
 				1124920B1E85DEDD0073C929 /* LaunchScreen.storyboard */,
 				1124920E1E85DEDD0073C929 /* Info.plist */,
@@ -131,6 +163,29 @@
 			path = GearUpUITests;
 			sourceTree = "<group>";
 		};
+		6651A7132D7A0435B6D76DCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FE1707239A8E7290EE87B9B /* Pods_GearUp.framework */,
+				92CBBCAF11547FC7E3A101C7 /* Pods_GearUpTests.framework */,
+				62F7892D45C002C9E07AB1CE /* Pods_GearUpUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DABBF2F0719BDB128FD3451 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AC9289D40E2E77163882610 /* Pods-GearUp.debug.xcconfig */,
+				106A1875C11CC94EB8A07919 /* Pods-GearUp.release.xcconfig */,
+				68F9388D0437F749F1DB44C6 /* Pods-GearUpTests.debug.xcconfig */,
+				CDEFFB34A08F372084B6DA06 /* Pods-GearUpTests.release.xcconfig */,
+				DEB25334B68DAE29F6884DA7 /* Pods-GearUpUITests.debug.xcconfig */,
+				5E23723781C40D0900FB8FF9 /* Pods-GearUpUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 112492271E85DEDD0073C929 /* Build configuration list for PBXNativeTarget "GearUp" */;
 			buildPhases = (
+				25F48926332AD48E770EF6C2 /* [CP] Check Pods Manifest.lock */,
 				112491FB1E85DEDC0073C929 /* Sources */,
 				112491FC1E85DEDC0073C929 /* Frameworks */,
 				112491FD1E85DEDC0073C929 /* Resources */,
+				A53AB9EE05BE9C76E336474D /* [CP] Embed Pods Frameworks */,
+				71AAF32DB7240EC9FB6C852D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1124922A1E85DEDD0073C929 /* Build configuration list for PBXNativeTarget "GearUpTests" */;
 			buildPhases = (
+				883CDC2567403BEC0001E15F /* [CP] Check Pods Manifest.lock */,
 				1124920F1E85DEDD0073C929 /* Sources */,
 				112492101E85DEDD0073C929 /* Frameworks */,
 				112492111E85DEDD0073C929 /* Resources */,
+				9FC7AC3F13C6FEC1A714FF86 /* [CP] Embed Pods Frameworks */,
+				DE565E6E9064504A5968F51F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1124922D1E85DEDD0073C929 /* Build configuration list for PBXNativeTarget "GearUpUITests" */;
 			buildPhases = (
+				0A32A9DA2A306DA15D1905BA /* [CP] Check Pods Manifest.lock */,
 				1124921A1E85DEDD0073C929 /* Sources */,
 				1124921B1E85DEDD0073C929 /* Frameworks */,
 				1124921C1E85DEDD0073C929 /* Resources */,
+				69BC5A676C19BBBFAFDA03FE /* [CP] Embed Pods Frameworks */,
+				1A49BB9ECEA9B40F74CDF89A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,15 +324,158 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A32A9DA2A306DA15D1905BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1A49BB9ECEA9B40F74CDF89A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GearUpUITests/Pods-GearUpUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25F48926332AD48E770EF6C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69BC5A676C19BBBFAFDA03FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GearUpUITests/Pods-GearUpUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71AAF32DB7240EC9FB6C852D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GearUp/Pods-GearUp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		883CDC2567403BEC0001E15F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC7AC3F13C6FEC1A714FF86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GearUpTests/Pods-GearUpTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A53AB9EE05BE9C76E336474D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GearUp/Pods-GearUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE565E6E9064504A5968F51F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GearUpTests/Pods-GearUpTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		112491FB1E85DEDC0073C929 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0026B021E92EE4800CFAB0A /* MenuHelper.swift in Sources */,
 				112492051E85DEDD0073C929 /* ViewController.swift in Sources */,
+				A0026AFE1E92E73000CFAB0A /* MenuViewController.swift in Sources */,
 				A0026AF81E92410B00CFAB0A /* CategoryRow.swift in Sources */,
 				A0026AFA1E92C14C00CFAB0A /* ListingCell.swift in Sources */,
 				112492031E85DEDD0073C929 /* AppDelegate.swift in Sources */,
+				A0026B041E92F02C00CFAB0A /* PresentMenuAnimator.swift in Sources */,
+				A0026B001E92EE0300CFAB0A /* Interactor.swift in Sources */,
+				A0026AFC1E92E71800CFAB0A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +625,7 @@
 		};
 		112492281E85DEDD0073C929 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AC9289D40E2E77163882610 /* Pods-GearUp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GearUp/Info.plist;
@@ -430,6 +638,7 @@
 		};
 		112492291E85DEDD0073C929 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 106A1875C11CC94EB8A07919 /* Pods-GearUp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GearUp/Info.plist;
@@ -442,6 +651,7 @@
 		};
 		1124922B1E85DEDD0073C929 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F9388D0437F749F1DB44C6 /* Pods-GearUpTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +666,7 @@
 		};
 		1124922C1E85DEDD0073C929 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDEFFB34A08F372084B6DA06 /* Pods-GearUpTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -470,6 +681,7 @@
 		};
 		1124922E1E85DEDD0073C929 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEB25334B68DAE29F6884DA7 /* Pods-GearUpUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = GearUpUITests/Info.plist;
@@ -483,6 +695,7 @@
 		};
 		1124922F1E85DEDD0073C929 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E23723781C40D0900FB8FF9 /* Pods-GearUpUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = GearUpUITests/Info.plist;

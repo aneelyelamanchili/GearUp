@@ -1,0 +1,6 @@
+framework module Pods_GearUp {
+  umbrella header "Pods-GearUp-umbrella.h"
+
+  export *
+  module * { export * }
+}

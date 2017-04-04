@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pIL-jk-LUR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pIL-jk-LUR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,7 +24,81 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdU-Ht-ctt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2015" y="27"/>
+            <point key="canvasLocation" x="-818" y="9"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rM1-gZ-AIp">
+            <objects>
+                <navigationController id="kTo-aq-sju" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PJJ-pS-O1X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xLY-4o-p1z" kind="relationship" relationship="rootViewController" id="WV3-nF-mQs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1b7-3y-U2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1622" y="707"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="gRa-pT-Fst">
+            <objects>
+                <viewController id="xLY-4o-p1z" customClass="MainViewController" customModule="GearUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cO2-2Q-3tf"/>
+                        <viewControllerLayoutGuide type="bottom" id="pYx-Jh-Hb8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XQ6-aL-uC8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.62376436535586288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="QI9-LD-F3b">
+                        <barButtonItem key="leftBarButtonItem" image="User-100" id="i4b-2g-U3k" userLabel="Menu">
+                            <connections>
+                                <segue destination="L63-5u-XzX" kind="presentation" id="on5-d3-TI4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6j-J4-84R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-825" y="707"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="pRo-xn-E1p">
+            <objects>
+                <viewController id="L63-5u-XzX" customClass="MenuViewController" customModule="GearUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QmX-KR-IXQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="KbM-VK-fcr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="asv-DI-gkA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivV-ge-WVK">
+                                <rect key="frame" x="320" y="28" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeMenuWithSender:" destination="L63-5u-XzX" eventType="touchUpInside" id="fOd-27-IIT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0014224325956834205" blue="0.052387154034525318" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ivV-ge-WVK" firstAttribute="top" secondItem="QmX-KR-IXQ" secondAttribute="bottom" constant="8" id="BPr-UQ-lo3"/>
+                            <constraint firstItem="ivV-ge-WVK" firstAttribute="trailing" secondItem="asv-DI-gkA" secondAttribute="trailingMargin" id="NxC-4I-3nl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MvI-2c-0zk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9" y="707"/>
         </scene>
         <!--Browse-->
         <scene sceneID="YJV-M3-htk">
@@ -63,7 +137,7 @@
                                                             <rect key="frame" x="5" y="-0.5" width="172" height="213.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="172" height="213"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="172" height="213.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KAj-id-tOv">
@@ -133,13 +207,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Browse" id="RcQ-2z-s5I">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="JMO-KI-Ev2"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="wZa-jc-dL3"/>
+                        <barButtonItem key="leftBarButtonItem" image="User-100" id="JMO-KI-Ev2"/>
+                        <barButtonItem key="rightBarButtonItem" image="Image" id="wZa-jc-dL3"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFp-Yb-48A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-898.39999999999998" y="26.53673163418291"/>
+            <point key="canvasLocation" x="10" y="9"/>
         </scene>
     </scenes>
     <resources>
