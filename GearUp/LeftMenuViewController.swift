@@ -30,21 +30,21 @@ class LeftMenuViewController: UIViewController, LeftMenuProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        
-//        self.view.backgroundColor = UIColor(red:0.15, green:0.27, blue:0.36, alpha:1.0)
         
-//        let viewSize:CGSize = self.view.frame.size;
-//        
-//        self.tableView.frame = CGRect(x: 0, y: 0, width: viewSize.width-50, height: viewSize.height)
-//        self.tableView.separatorColor = UIColor.clear
-//        self.tableView.dataSource = self
-//        self.tableView.delegate = self
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileVIewController
-//        self.profileViewController = UINavigationController(rootViewController: profileViewController)
-//        
-//        self.tableView.registerCellClass(BaseTableViewCell.self)
-//        self.view.addSubview(self.tableView)
+        self.view.backgroundColor = UIColor(red:0.15, green:0.27, blue:0.36, alpha:1.0)
+        
+        let viewSize:CGSize = self.view.frame.size;
+        
+        self.tableView.frame = CGRect(x: 0, y: 0, width: viewSize.width-144, height: viewSize.height)
+        self.tableView.separatorColor = UIColor.clear
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileVIewController
+        self.profileViewController = UINavigationController(rootViewController: profileViewController)
+        
+        self.tableView.registerCellClass(BaseTableViewCell.self)
+        self.view.addSubview(self.tableView)
     }
     
     override func didReceiveMemoryWarning() {

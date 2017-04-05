@@ -13,6 +13,11 @@ class ProfileVIewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let logo = UIImage(named: "Logo")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
+//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0)
+//        self.navigationItem.rightBarButtonItem?.tintColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0)
     }
     
     override func didReceiveMemoryWarning() {

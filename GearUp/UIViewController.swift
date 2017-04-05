@@ -13,8 +13,8 @@ extension UIViewController {
     func setNavigationBarItem() {
         self.addLeftBarButtonWithImage(UIImage(named: "User")!)
         self.addRightBarButtonWithImage(UIImage(named: "Bars")!)
-        self.navigationItem.leftBarButtonItem?.tintColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)
-        self.navigationItem.rightBarButtonItem?.tintColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor(red:0.58, green:0.95, blue:0.99, alpha:1.0)
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor(red:0.58, green:0.95, blue:0.99, alpha:1.0)
         //self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
         self.slideMenuController()?.removeLeftGestures()
         self.slideMenuController()?.removeRightGestures()

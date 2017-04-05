@@ -20,7 +20,10 @@ class ViewController: UIViewController {
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
         
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.46, green:0.95, blue:0.99, alpha:1.0)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        //navigationController?.navigationBar.barTintColor = UIColor(red:0.46, green:0.95, blue:0.99, alpha:1.0)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
