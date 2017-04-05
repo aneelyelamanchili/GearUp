@@ -83,7 +83,7 @@
                                                                     </label>
                                                                 </subviews>
                                                             </view>
-                                                            <color key="backgroundColor" red="0.45879526455812014" green="0.95717032970637683" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.25098039215686274" green="0.72156862745098038" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstItem="RIP-x2-PjK" firstAttribute="leading" secondItem="bme-0I-nSF" secondAttribute="trailing" constant="22" id="AFy-yD-iWf"/>
                                                                 <constraint firstItem="KAj-id-tOv" firstAttribute="leading" secondItem="wCD-hE-UJX" secondAttribute="leading" id="Aye-wf-HeT"/>

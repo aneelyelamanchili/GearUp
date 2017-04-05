@@ -22,8 +22,9 @@ class ViewController: UIViewController {
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = false;
         
-        //navigationController?.navigationBar.barTintColor = UIColor(red:0.46, green:0.95, blue:0.99, alpha:1.0)
+        navigationController?.navigationBar.barTintColor = UIColor(red:1.0, green:1.0, blue:1.0, alpha:1.0)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
