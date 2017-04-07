@@ -35,12 +35,22 @@ class LeftMenuViewController: UIViewController, LeftMenuProtocol {
         
         let viewSize:CGSize = self.view.frame.size;
         
-        self.tableView.frame = CGRect(x: 0, y: 0, width: viewSize.width-144, height: viewSize.height)
+        var toAdjust:CGFloat!
+        let bounds = UIScreen.main.bounds
+        let height = bounds.size.height
+        
+        if (UIDevice.current.userInterfaceIdiom == .phone && height == 667.0) {
+            toAdjust = 105
+        } else if (UIDevice.current.userInterfaceIdiom == .phone && height == 736.0) {
+            toAdjust = 144
+        }
+        
+        self.tableView.frame = CGRect(x: 0, y: 0, width: viewSize.width-toAdjust, height: viewSize.height)
         self.tableView.separatorColor = UIColor.clear
         self.tableView.dataSource = self
         self.tableView.delegate = self
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileVIewController
+        let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         self.profileViewController = UINavigationController(rootViewController: profileViewController)
         
         self.tableView.registerCellClass(BaseTableViewCell.self)

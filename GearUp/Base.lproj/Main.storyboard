@@ -46,7 +46,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="244"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W13-6A-ovI" id="lct-eg-MFe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="243.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="243"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fs4-bs-lMZ">
@@ -60,7 +60,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="listingCell" id="wCD-hE-UJX" customClass="ListingCell" customModule="GearUp" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="-0.5" width="172" height="213.5"/>
+                                                            <rect key="frame" x="5" y="0.0" width="172" height="213.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="213.5"/>
@@ -192,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="-2002" y="1388"/>
         </scene>
-        <!--ProfileV Iew Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="euB-nk-K3C">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="02U-hV-UbE" customClass="ProfileVIewController" customModule="GearUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="02U-hV-UbE" customClass="ProfileViewController" customModule="GearUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pvQ-l4-OgB"/>
                         <viewControllerLayoutGuide type="bottom" id="HhQ-JF-lKj"/>

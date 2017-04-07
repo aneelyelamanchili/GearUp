@@ -6,7 +6,7 @@ target 'GearUp' do
   use_frameworks!
 
   # Pods for GearUp
-  pod 'SlideMenuControllerSwift'  
+  pod 'SlideMenuControllerSwift'
 
   target 'GearUpTests' do
     inherit! :search_paths

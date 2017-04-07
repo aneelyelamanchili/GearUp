@@ -269,6 +269,7 @@
 				TargetAttributes = {
 					112491FE1E85DEDC0073C929 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MS7GBK46MH;
 						ProvisioningStyle = Automatic;
 					};
 					112492121E85DEDD0073C929 = {
@@ -636,6 +637,7 @@
 			baseConfigurationReference = 7065749E29E109F99699456B /* Pods-GearUp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MS7GBK46MH;
 				INFOPLIST_FILE = GearUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LavaLab.GearUp;
@@ -649,6 +651,7 @@
 			baseConfigurationReference = 1505ABC3CA1FC7C3DFA1EA17 /* Pods-GearUp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MS7GBK46MH;
 				INFOPLIST_FILE = GearUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LavaLab.GearUp;

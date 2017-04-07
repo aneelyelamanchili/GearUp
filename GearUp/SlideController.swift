@@ -14,7 +14,7 @@ class SlideController: SlideMenuController {
     override func isTagetViewController() -> Bool {
         if let vc = UIApplication.topViewController() {
             if vc is ViewController ||
-                vc is ProfileVIewController {
+                vc is ProfileViewController {
                 return true
             }
         }
