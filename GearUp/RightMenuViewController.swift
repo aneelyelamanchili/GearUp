@@ -9,8 +9,9 @@
 import UIKit
 
 enum RightMenu: Int {
-    case main = 0
-    case profile
+    case outdoors = 0
+    case electronics
+    case events
 }
 
 protocol RightMenuProtocol: class {
@@ -20,7 +21,7 @@ protocol RightMenuProtocol: class {
 class RightMenuViewController: UIViewController, RightMenuProtocol {
     
     var tableView = UITableView()
-    var menus = ["Main", "Profile"]
+    var menus = ["Outdoors", "Electronics", "Events"]
     var mainViewController: UIViewController!
     var profileViewController: UIViewController!
     
@@ -31,20 +32,29 @@ class RightMenuViewController: UIViewController, RightMenuProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(red:0.38, green:0.71, blue:0.90, alpha:1.0)
-        
         let viewSize:CGSize = self.view.frame.size;
         
-//        self.tableView.frame = CGRect(x: 0, y: 0, width: viewSize.width-50, height: viewSize.height)
-//        self.tableView.separatorColor = UIColor.clear
-//        self.tableView.dataSource = self
-//        self.tableView.delegate = self
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileVIewController
-//        self.profileViewController = UINavigationController(rootViewController: profileViewController)
-//        
-//        self.tableView.registerCellClass(BaseTableViewCell.self)
-//        self.view.addSubview(self.tableView)
+        var toAdjust:CGFloat!
+        let bounds = UIScreen.main.bounds
+        let height = bounds.size.height
+        
+        if (UIDevice.current.userInterfaceIdiom == .phone && height == 667.0) {
+            toAdjust = 105
+        } else if (UIDevice.current.userInterfaceIdiom == .phone && height == 736.0) {
+            toAdjust = 144
+        }
+        
+        self.tableView.frame = CGRect(x: 0, y: 0, width: viewSize.width-toAdjust, height: viewSize.height)
+        self.tableView.separatorColor = UIColor.clear
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        self.profileViewController = UINavigationController(rootViewController: profileViewController)
+        
+        self.tableView.registerCellClass(BaseTableViewCell.self)
+        self.view.addSubview(self.tableView)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,53 +68,61 @@ class RightMenuViewController: UIViewController, RightMenuProtocol {
     
     func changeViewController(_ menu: RightMenu) {
         switch menu {
-        case .main:
-            self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
-        case .profile:
+        case .outdoors:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let rightViewController = storyboard.instantiateViewController(withIdentifier: "RightMenuViewController") as! RightMenuViewController
+            let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftMenuViewController") as! LeftMenuViewController
+            let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+            let slideMenuController = SlideController(mainViewController: nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
+            self.slideMenuController()?.changeMainViewController(slideMenuController, close: true)
+        case .electronics:
             self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
+        case .events:
+            break
             
         }
     }
 }
-//
-//extension RightMenuViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if let menu = RightMenu(rawValue: indexPath.item) {
-//            switch menu {
-//            case .main, .profile:
-//                return BaseTableViewCell.height()
-//            }
-//        }
-//        return 0
-//    }
-//}
-//
-//extension RightMenuViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print(menus.count)
-//        return menus.count
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if let menu = RightMenu(rawValue: indexPath.item) {
-//            switch menu {
-//            case .main, .profile:
-//                let cell = BaseTableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: BaseTableViewCell.identifier)
-//                cell.setData(menus[indexPath.row])
-//                
-//                return cell
-//            }
-//        }
-//        
-//        return UITableViewCell()
-//    }
-//    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let menu = RightMenu(rawValue: indexPath.item) {
-//            self.changeViewController(menu)
-//        }
-//    }
-//}
+
+extension RightMenuViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if let menu = RightMenu(rawValue: indexPath.item) {
+            switch menu {
+            case .outdoors, .electronics, .events:
+                return BaseTableViewCell.height()
+            }
+        }
+        return 0
+    }
+}
+
+extension RightMenuViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(menus.count)
+        return menus.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let menu = RightMenu(rawValue: indexPath.item) {
+            switch menu {
+            case .outdoors, .electronics, .events:
+                let cell = BaseTableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: BaseTableViewCell.identifier)
+                cell.setData(menus[indexPath.row])
+                
+                return cell
+            }
+        }
+        
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let menu = RightMenu(rawValue: indexPath.item) {
+            self.changeViewController(menu)
+        }
+    }
+}
 
 extension RightMenuViewController: UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

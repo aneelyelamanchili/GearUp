@@ -21,6 +21,7 @@
 		115D1C351E9483A00063DC59 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D1C341E9483A00063DC59 /* ProfileViewController.swift */; };
 		115D1C371E9483C10063DC59 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D1C361E9483C10063DC59 /* UIViewController.swift */; };
 		115D1C3D1E9487D30063DC59 /* RightMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D1C3C1E9487D30063DC59 /* RightMenuViewController.swift */; };
+		119303DF1E9DD95600BB4F8E /* LorienBandhauer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 119303DE1E9DD95600BB4F8E /* LorienBandhauer.jpg */; };
 		89BEA21F7AF860FA2054E228 /* Pods_GearUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A163AABF51458DE9FF99C7F3 /* Pods_GearUpUITests.framework */; };
 		A0026AF81E92410B00CFAB0A /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0026AF71E92410B00CFAB0A /* CategoryRow.swift */; };
 		A0026AFA1E92C14C00CFAB0A /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0026AF91E92C14C00CFAB0A /* ListingCell.swift */; };
@@ -67,6 +68,7 @@
 		115D1C341E9483A00063DC59 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		115D1C361E9483C10063DC59 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		115D1C3C1E9487D30063DC59 /* RightMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuViewController.swift; sourceTree = "<group>"; };
+		119303DE1E9DD95600BB4F8E /* LorienBandhauer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LorienBandhauer.jpg; sourceTree = "<group>"; };
 		1505ABC3CA1FC7C3DFA1EA17 /* Pods-GearUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GearUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GearUp/Pods-GearUp.release.xcconfig"; sourceTree = "<group>"; };
 		2BBE30B076E62634A6C01BCD /* Pods-GearUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GearUpUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GearUpUITests/Pods-GearUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4DC3D98420E27EF64E2AE51F /* Pods-GearUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GearUpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GearUpTests/Pods-GearUpTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		112492011E85DEDD0073C929 /* GearUp */ = {
 			isa = PBXGroup;
 			children = (
+				119303DD1E9DD94C00BB4F8E /* img */,
 				112492021E85DEDD0073C929 /* AppDelegate.swift */,
 				112492041E85DEDD0073C929 /* ViewController.swift */,
 				A0026AF71E92410B00CFAB0A /* CategoryRow.swift */,
@@ -167,6 +170,14 @@
 				112492241E85DEDD0073C929 /* Info.plist */,
 			);
 			path = GearUpUITests;
+			sourceTree = "<group>";
+		};
+		119303DD1E9DD94C00BB4F8E /* img */ = {
+			isa = PBXGroup;
+			children = (
+				119303DE1E9DD95600BB4F8E /* LorienBandhauer.jpg */,
+			);
+			name = img;
 			sourceTree = "<group>";
 		};
 		355CCDABD51CC5EA08D3E868 /* Pods */ = {
@@ -310,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1124920D1E85DEDD0073C929 /* LaunchScreen.storyboard in Resources */,
+				119303DF1E9DD95600BB4F8E /* LorienBandhauer.jpg in Resources */,
 				1124920A1E85DEDD0073C929 /* Assets.xcassets in Resources */,
 				112492081E85DEDD0073C929 /* Main.storyboard in Resources */,
 			);

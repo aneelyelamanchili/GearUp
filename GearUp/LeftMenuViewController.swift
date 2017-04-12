@@ -10,7 +10,9 @@ import UIKit
 
 enum LeftMenu: Int {
     case main = 0
-    case profile
+    case list
+    case help
+    case settings
 }
 
 protocol LeftMenuProtocol: class {
@@ -20,7 +22,7 @@ protocol LeftMenuProtocol: class {
 class LeftMenuViewController: UIViewController, LeftMenuProtocol {
     
     var tableView = UITableView()
-    var menus = ["Main", "Profile"]
+    var menus = ["Browse", "List", "Help", "Settings"]
     var mainViewController: UIViewController!
     var profileViewController: UIViewController!
     
@@ -34,6 +36,24 @@ class LeftMenuViewController: UIViewController, LeftMenuProtocol {
         self.view.backgroundColor = UIColor(red:0.15, green:0.27, blue:0.36, alpha:1.0)
         
         let viewSize:CGSize = self.view.frame.size;
+        let newView = UIView(frame: CGRect(x: 0, y: 0, width: viewSize.width-105, height: 150))
+        newView.backgroundColor = UIColor(red:0.38, green:0.71, blue:0.89, alpha:1.0)
+        let image = UIImage(named: "LorienBandhauer.jpg")
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 15, y: 20, width: 100, height: 100)
+        imageView.layer.borderWidth = 0.1
+        imageView.layer.masksToBounds = false
+        imageView.layer.borderColor = UIColor.black.cgColor
+        imageView.layer.cornerRadius = imageView.frame.height/2
+        imageView.clipsToBounds = true
+        newView.addSubview(imageView)
+        
+        let label = UILabel(frame: CGRect(x: 190, y: 75, width: 200, height: 21))
+        label.center = CGPoint(x: 190, y: 75)
+        label.textAlignment = .center
+        label.text = "Lorien Bandhauer"
+        label.textColor = UIColor.white
+        newView.addSubview(label)
         
         var toAdjust:CGFloat!
         let bounds = UIScreen.main.bounds
@@ -45,7 +65,7 @@ class LeftMenuViewController: UIViewController, LeftMenuProtocol {
             toAdjust = 144
         }
         
-        self.tableView.frame = CGRect(x: 0, y: 0, width: viewSize.width-toAdjust, height: viewSize.height)
+        self.tableView.frame = CGRect(x: 0, y: 150, width: viewSize.width-toAdjust, height: viewSize.height)
         self.tableView.separatorColor = UIColor.clear
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -55,6 +75,11 @@ class LeftMenuViewController: UIViewController, LeftMenuProtocol {
         
         self.tableView.registerCellClass(BaseTableViewCell.self)
         self.view.addSubview(self.tableView)
+        self.view.addSubview(newView);
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(LeftMenuViewController.handleTap(sender:)))
+        newView.addGestureRecognizer(gesture)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -69,11 +94,22 @@ class LeftMenuViewController: UIViewController, LeftMenuProtocol {
     func changeViewController(_ menu: LeftMenu) {
         switch menu {
         case .main:
-            self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
-        case .profile:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let rightViewController = storyboard.instantiateViewController(withIdentifier: "RightMenuViewController") as! RightMenuViewController
+            let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftMenuViewController") as! LeftMenuViewController
+            let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+            let slideMenuController = SlideController(mainViewController: nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
+            self.slideMenuController()?.changeMainViewController(slideMenuController, close: true)
+        case .list:
             self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
-            
+        case .help: break
+        case .settings: break
         }
+    }
+    
+    func handleTap(sender: UITapGestureRecognizer? = nil) {
+        self.slideMenuController()?.changeMainViewController(self.profileViewController, close: true)
     }
 }
 
@@ -81,7 +117,7 @@ extension LeftMenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let menu = LeftMenu(rawValue: indexPath.item) {
             switch menu {
-            case .main, .profile:
+            case .main, .list, .help, .settings:
                 return BaseTableViewCell.height()
             }
         }
@@ -98,7 +134,7 @@ extension LeftMenuViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let menu = LeftMenu(rawValue: indexPath.item) {
             switch menu {
-            case .main, .profile:
+            case .main, .list, .help, .settings:
                 let cell = BaseTableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: BaseTableViewCell.identifier)
                 cell.setData(menus[indexPath.row])
                 
