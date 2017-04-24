@@ -36,11 +36,11 @@ class LeftMenuViewController: UIViewController, LeftMenuProtocol {
         self.view.backgroundColor = UIColor(red:0.15, green:0.27, blue:0.36, alpha:1.0)
         
         let viewSize:CGSize = self.view.frame.size;
-        let newView = UIView(frame: CGRect(x: 0, y: 0, width: viewSize.width-105, height: 150))
+        let newView = UIView(frame: CGRect(x: 0, y: 0, width: viewSize.width-105, height: 110))
         newView.backgroundColor = UIColor(red:0.38, green:0.71, blue:0.89, alpha:1.0)
         let image = UIImage(named: "LorienBandhauer.jpg")
         let imageView = UIImageView(image: image!)
-        imageView.frame = CGRect(x: 15, y: 20, width: 100, height: 100)
+        imageView.frame = CGRect(x: 15, y: 20, width: 60, height: 60)
         imageView.layer.borderWidth = 0.1
         imageView.layer.masksToBounds = false
         imageView.layer.borderColor = UIColor.black.cgColor
@@ -48,27 +48,40 @@ class LeftMenuViewController: UIViewController, LeftMenuProtocol {
         imageView.clipsToBounds = true
         newView.addSubview(imageView)
         
-        let label = UILabel(frame: CGRect(x: 190, y: 75, width: 200, height: 21))
-        label.center = CGPoint(x: 190, y: 75)
+        let label = UILabel(frame: CGRect(x: 20, y: 20, width: 200, height: 21))
+        label.center = CGPoint(x: 155, y: 41)
         label.textAlignment = .center
         label.text = "Lorien Bandhauer"
         label.textColor = UIColor.white
+        label.font = UIFont(name: "CircularStd-Bold", size: 17)
         newView.addSubview(label)
+        
+        let edit = UILabel(frame: CGRect(x: 20, y: 20, width: 200, height: 21))
+        edit.center = CGPoint(x: 115, y: 61)
+        edit.textAlignment = .center
+        edit.text = "edit profile"
+        edit.textColor = UIColor.white
+        edit.font = UIFont(name: "CircularStd-Book", size: 12)
+        newView.addSubview(edit)
+
         
         var toAdjust:CGFloat!
         let bounds = UIScreen.main.bounds
         let height = bounds.size.height
         
         if (UIDevice.current.userInterfaceIdiom == .phone && height == 667.0) {
-            toAdjust = 105
+            toAdjust = 90
         } else if (UIDevice.current.userInterfaceIdiom == .phone && height == 736.0) {
-            toAdjust = 144
+            toAdjust = 129
         }
         
-        self.tableView.frame = CGRect(x: 0, y: 150, width: viewSize.width-toAdjust, height: viewSize.height)
+        self.tableView.frame = CGRect(x: -15, y: 110, width: viewSize.width-toAdjust, height: viewSize.height)
+        self.tableView.backgroundColor = UIColor(red:0.38, green:0.71, blue:0.89, alpha:1.0)
         self.tableView.separatorColor = UIColor.clear
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.tableView.separatorInset = .zero
+        self.tableView.layoutMargins = .zero
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         self.profileViewController = UINavigationController(rootViewController: profileViewController)

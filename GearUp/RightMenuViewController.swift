@@ -34,26 +34,39 @@ class RightMenuViewController: UIViewController, RightMenuProtocol {
         
         let viewSize:CGSize = self.view.frame.size;
         
+        let newView = UIView(frame: CGRect(x: 0, y: 0, width: viewSize.width-105, height: 50))
+        newView.backgroundColor = UIColor(red:0.38, green:0.71, blue:0.89, alpha:1.0)
+        
+        let label = UILabel(frame: CGRect(x: 20, y: 20, width: 200, height: 21))
+        label.center = CGPoint(x: 60, y: 30)
+        label.textAlignment = .center
+        label.text = "Categories"
+        label.textColor = UIColor.white
+        label.font = UIFont(name: "CircularStd-Bold", size: 17)
+        newView.addSubview(label)
+        
         var toAdjust:CGFloat!
         let bounds = UIScreen.main.bounds
         let height = bounds.size.height
         
         if (UIDevice.current.userInterfaceIdiom == .phone && height == 667.0) {
-            toAdjust = 105
+            toAdjust = 120
         } else if (UIDevice.current.userInterfaceIdiom == .phone && height == 736.0) {
-            toAdjust = 144
+            toAdjust = 159
         }
         
-        self.tableView.frame = CGRect(x: 0, y: 0, width: viewSize.width-toAdjust, height: viewSize.height)
+        self.tableView.frame = CGRect(x: 10, y: 50, width: viewSize.width-toAdjust, height: viewSize.height)
         self.tableView.separatorColor = UIColor.clear
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.tableView.backgroundColor = UIColor(red:0.38, green:0.71, blue:0.89, alpha:1.0)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         self.profileViewController = UINavigationController(rootViewController: profileViewController)
         
         self.tableView.registerCellClass(BaseTableViewCell.self)
         self.view.addSubview(self.tableView)
+        self.view.addSubview(newView)
 
     }
     
@@ -109,7 +122,6 @@ extension RightMenuViewController: UITableViewDataSource {
             case .outdoors, .electronics, .events:
                 let cell = BaseTableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: BaseTableViewCell.identifier)
                 cell.setData(menus[indexPath.row])
-                
                 return cell
             }
         }

@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var categories = ["Newly Added", "Outdoors", "Electronics", "Events/Parties"]
+    var categories = ["Newly Added", "Outdoors", "Electronics", "Events"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,11 +50,27 @@ extension ViewController : UITableViewDelegate {
 extension ViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+
         return categories[section]
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return categories.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.white
+        
+        let headerLabel = UILabel(frame: CGRect(x: 10, y: 0, width:
+            tableView.bounds.size.width, height: tableView.bounds.size.height))
+        headerLabel.font = UIFont(name: "CircularStd-Bold", size: 20)
+        headerLabel.textColor = UIColor(red:0.38, green:0.71, blue:0.89, alpha:1.0)
+        headerLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+        headerLabel.sizeToFit()
+        headerView.addSubview(headerLabel)
+        
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,6 +79,8 @@ extension ViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CategoryRow
+        print(indexPath.section)
+        cell.sectionName = self.tableView(tableView, titleForHeaderInSection: indexPath.section)
         return cell
     }
 

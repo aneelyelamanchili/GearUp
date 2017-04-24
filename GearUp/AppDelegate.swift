@@ -23,14 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
         
-        UINavigationBar.appearance().tintColor = UIColor(red:0.50, green:0.74, blue:0.00, alpha:1.00)
+        UINavigationBar.appearance().tintColor = UIColor(red:0.38, green:0.71, blue:0.89, alpha:1.0)
         
         leftViewController.mainViewController = nvc
         
         let slideMenuController = SlideController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
         
         slideMenuController.automaticallyAdjustsScrollViewInsets = true
-        self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
+        //self.window?.backgroundColor = UIColor(red: 236.0/255, green: 238.0/255, blue: 241.0/255, alpha: 1.0)
+        self.window?.backgroundColor = UIColor.white
         self.window?.rootViewController = slideMenuController
         self.window?.makeKeyAndVisible()
     }
