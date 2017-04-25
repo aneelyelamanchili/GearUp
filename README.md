@@ -5,6 +5,8 @@
 
 *GearUp* is a mobile platform where students can borrow gear from others and rent out their own within a seamlessly functioning application.
 
+Created as part of [USC LavaLab](http://usclavalab.org/)'s Spring 2017 cohort ideation & development process.
+
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
