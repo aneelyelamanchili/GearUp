@@ -93,7 +93,7 @@ class ListingCell : UICollectionViewCell {
         }
         
         imageView.image = img
-    }
+    }    
 
     
 }

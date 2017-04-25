@@ -12,6 +12,7 @@ class CategoryRow : UITableViewCell {
     @IBOutlet weak var seeAll: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
      var sectionName:String?
+    var index:Int?
 }
 
 extension CategoryRow : UICollectionViewDataSource {
@@ -34,7 +35,7 @@ extension CategoryRow : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "listingCell", for: indexPath) as! ListingCell
-        
+        index = indexPath.row
         if(sectionName == "Newly Added") {
             cell.configureNew(index: indexPath.row)
         }

@@ -52,7 +52,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fs4-bs-lMZ">
-                                                    <rect key="frame" x="0.0" y="-10" width="375" height="230"/>
+                                                    <rect key="frame" x="0.0" y="-10" width="375" height="229"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="0pM-fK-ek5">
                                                         <size key="itemSize" width="172" height="205"/>
@@ -62,7 +62,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="listingCell" id="wCD-hE-UJX" customClass="ListingCell" customModule="GearUp" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="13" width="172" height="205"/>
+                                                            <rect key="frame" x="5" y="12" width="172" height="205"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="205"/>
@@ -93,7 +93,7 @@
                                                             <connections>
                                                                 <outlet property="imageView" destination="KAj-id-tOv" id="TPh-N8-F4k"/>
                                                                 <outlet property="name" destination="bme-0I-nSF" id="bcm-qS-vDu"/>
-                                                                <segue destination="MkG-Up-SkF" kind="show" id="0cV-9F-mWa"/>
+                                                                <segue destination="MkG-Up-SkF" kind="show" identifier="showDetail" id="0cV-9F-mWa"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -157,7 +157,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cell-imagesArtboard 7.png" translatesAutoresizingMaskIntoConstraints="NO" id="TPf-KB-fHg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cell-images-no-labelArtboard 7@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="TPf-KB-fHg">
                                 <rect key="frame" x="38" y="121" width="299" height="282"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="299" id="SaR-zq-wOe"/>
@@ -484,7 +484,7 @@
     </scenes>
     <resources>
         <image name="Bars" width="22" height="13"/>
-        <image name="Cell-imagesArtboard 7.png" width="16" height="16"/>
+        <image name="Cell-images-no-labelArtboard 7@3x.png" width="16" height="16"/>
         <image name="Photo Aug 04, 11 19 04 AM.jpg" width="933" height="764"/>
         <image name="User" width="22" height="25"/>
     </resources>
